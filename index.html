@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Certificado Grobert Apaza Yujra</title>
+<style>
+  :root{
+    --green-dark: #177f21;
+    --green-medium: #2fa034;
+    --border-gray: #d6d6d6;
+    --text-dark: #2b2b2b;
+  }
+  body{ margin:0; font-family: Arial, sans-serif; background:#fff; color:var(--text-dark);}
+  .container{ max-width:820px; margin:20px auto; border:2px solid var(--border-gray); border-radius:6px; overflow:hidden; box-shadow:0 2px 4px rgba(0,0,0,0.05);}
+  .top-bar{ background:var(--green-dark); color:#fff; padding:12px; font-weight:600; text-align:center;}
+  .content{ display:flex; gap:20px; padding:20px;}
+  .photo{ width:140px; height:160px; border-radius:12px; overflow:hidden; border:3px solid #fff; box-shadow:0 0 3px rgba(0,0,0,0.2);}
+  .photo img{ width:100%; height:100%; object-fit:cover;}
+  .stamp{ position:absolute; top:90px; left:40px; transform:rotate(-6deg); font-size:42px; color:rgba(24,120,30,0.85); font-weight:800; font-family:Georgia,serif;}
+  .details{ flex:1; font-size:14px; line-height:1.6;}
+  .details b{ color:#222;}
+  .control{ margin-top:10px; padding-top:10px; border-top:1px solid #ddd;}
+  .validity{ text-align:center; padding:16px; border-top:2px solid #ddd; font-size:18px; font-weight:700; color:var(--green-dark);}
+  #qr{ margin-top:20px; text-align:center;}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      El Código ha sido Encontrado - Certificado válido hasta 21/10/2025
+    </div>
+    <div class="content">
+      <div style="position:relative;">
+        <div class="photo"><img src="photo.jpg" alt="Foto"></div>
+        <div class="stamp">S.I.B.</div>
+      </div>
+      <div class="details">
+        <div><b>Lugar y fecha de Emisión:</b> La Paz 12/08/2025</div>
+        <div><b>Nombre:</b> GROBERT APAZA YUJRA</div>
+        <div><b>Profesión:</b> INGENIERO CIVIL</div>
+        <div><b>No. de Registro:</b> 40038</div>
+        <div><b>Fecha de Registro:</b> 26/10/2018</div>
+        <div><b>Fecha Diploma Académico:</b> 12/12/2017</div>
+        <div><b>Categoría:</b> INGENIERO SUPERIOR</div>
+        <div><b>Nivel:</b> I</div>
+        <div><b>Institución a la que va Dirigida:</b> UPRE</div>
+        <div><b>El certificado sirve para:</b> SUPERVISION DE OBRAS CIVILES. “CONST. UNIDAD EDUCATIVA WALTER ALPIRE DURAN DISTRITAL D-4 DISTRITAL”, CARGO: RESIDENTE DE SUPERVISION</div>
+        <div class="control"><b>Código Único de Control:</b> JVL17815740038-17620</div>
+      </div>
+    </div>
+    <div class="validity">
+      EL CERTIFICADO TIENE VALIDEZ HASTA 21/10/2025
+    </div>
+    <div id="qr"></div>
+  </div>
+
+  <!-- Librería QR -->
+  <script src="https://cdn.jsdelivr.net/npm/kjua@0.1.1/kjua.min.js"></script>
+  <script>
+    const url = window.location.href; // la URL de tu página publicada
+    const qr = kjua({ text:url, size:200 });
+    document.getElementById("qr").appendChild(qr);
+  </script>
+</body>
+</html>
